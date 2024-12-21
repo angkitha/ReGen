@@ -15,7 +15,7 @@ def get_recipes():
     if not ingredientsList:
         return jsonify({"error": "Please add one or more ingredients."}), 400
 
-    API_KEY = 'a288b5fc65964f5b9c060531239addfa'
+    API_KEY = 'API_KEY_HERE'
     NUMBER_OF_RECIPES = 7
     try:
         # Makes input ingredients a list separated by commas
