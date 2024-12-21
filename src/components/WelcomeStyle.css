@@ -1,0 +1,217 @@
+/* WelcomeStyle.css: Styling WelcomePage.tsx in CSS*/
+
+/*Gradient Background Animation Style*/
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Section Formatting */
+.particles-container {
+    overflow-y: auto;
+    display: flex; 
+    flex-direction: row; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(270deg, #eecf9186, #fffef8, #fa54912b, #f9f4ec);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    overflow-y: auto; 
+  }
+
+  .left-section {
+    position: absolute; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    left: 0;
+    width: 50%; 
+    padding: 20px;
+    z-index: 2; 
+  }
+
+  .right-section {
+    position: absolute; 
+    display: flex;
+    align-items: flex-end; 
+    flex-direction: column;
+    justify-content: center; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    right: 0;
+    width: 50%;
+    padding-right: 50px;
+    z-index: 2; 
+  }
+
+  .bottom-section {
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    width: 70%; 
+    z-index: 1;
+    padding: 20px; 
+    transform: translateY(50%); 
+  }
+
+
+  /*Left Section: Formatting Text*/
+  /*Heading*/
+  .heading-left-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding-left: 20px; 
+
+  }
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0); 
+    }
+    50% {
+      transform: translate(0px, -5px); 
+    }
+  }
+  .floating-text {
+    animation: float 5s ease-in-out infinite;
+    font-family: 'Sans Serif 4'; 
+    font-size: 40pt; 
+    font-weight: bold; 
+    color: #e3c56a;
+  }
+  .description-text {
+    font-family: 'Arial', italic; 
+    font-size: 12pt; 
+    color: #0c0f15;
+    text-align: left;
+    padding-left: 10px; 
+  }
+  .input-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: left; 
+    width:250px; 
+    padding-left: 30px; 
+  }
+  .input-box {
+    justify-content: left;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .add-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ab864b;
+    color: white;
+    border: none;
+    width: 150px; 
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .recipe-add-button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    background-color: #ab864b;
+    color: white;
+    border: none;
+    width: 120px; 
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .add-button:hover {
+    background-color: #566b82;
+  }
+
+
+  /*Right Section: Inputted Ingredients */
+  .right-list{
+    background-color: #ecd1c16f;
+    max-width: 250px; 
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .right-list-heading{
+    font-family: 'Sans Serif 4'; 
+    font-size: 20pt; 
+    font-weight: bold; 
+    color: #584b23;
+  }
+
+  .right-list-body{
+    font-family: 'Arial'; 
+    font-size: 14pt; 
+    color: #453223;
+  }
+  /* Ingredients List Styling */
+  .ingredients-list {
+    list-style-type: none;
+    padding: 5px;
+    max-width: 400px; 
+  }
+  .ingredient-item {
+    background-color: #5d594e27;
+    border-radius: 5px;
+  }
+  .ingredient-text{
+    font-family: 'Arial'; 
+    font-size: 12pt; 
+    justify-content: space-between;
+    color: #282210;
+  }
+  .remove-button {
+    background-color: #d9989f8b;
+    color: white;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 7px; 
+  }
+  .remove-button:hover {
+    background-color: #54292d8d;
+  }
+
+
+  /*Bottom Section: Formatting*/
+  
+  .recipe-results {
+    margin-top: 20px;
+    background-color: #f7eede50;
+    margin-left: 20px;
+    padding: 20px;
+    max-width: 2000px; 
+    border-radius: 10px;
+  }
+  
+  .recipe-results-heading {
+    font-family: 'Sans Serif 4'; 
+    font-size: 25pt; 
+    font-weight: bold; 
+    color: #63552c;
+  }
+  
+  .recipe-results li {
+    margin-bottom: 10px;
+  }
+  .recipe-results a {
+    font-family: 'Arial'; 
+    font-size: 10pt; 
+    color: #423520;
+  }
+  
+  .recipe-results a:hover {
+    text-decoration: underline;
+  }
+
+  
+
